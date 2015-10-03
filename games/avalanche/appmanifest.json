@@ -1,9 +1,9 @@
 ﻿{
-	"name": "Avalanche",
-	"short_name": "Avalanche",
+	"name": "KiwiNinja",
+	"short_name": "KiwiNinja",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "landscape",
+	"orientation": "any",
 	"icons": [{
 		"src": "icon-16.png",
 		"sizes": "16x16",
