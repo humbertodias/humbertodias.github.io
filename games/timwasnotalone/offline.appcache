@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1443903325
+#1443973735
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -27,6 +27,7 @@ images/buttonleft-sheet0.png
 images/buttonright-sheet0.png
 images/buttona-sheet0.png
 images/buttonb-sheet0.png
+images/info-sheet0.png
 media/ok%20-%201.m4a
 media/ok%20-%201.ogg
 media/upgrade1.m4a
