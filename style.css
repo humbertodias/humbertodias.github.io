@@ -1,0 +1,76 @@
+BODY {
+  background: white;
+  color: black; 
+  font-size: 110%;
+  font-family: "Century Schoolbook L", "Book Antiqua", "URW Bookman L", "Garamond", "TeXGyrePagella", "DejaVu Serif", "Purisa", "Comic Sans MS", serif; 
+}
+a:link {
+  /* text-decoration: none; */
+} 
+a:visited {
+  /* text-decoration: none; */
+}
+a:hover {
+  color: red;
+} 
+a:active {
+  color: red;
+} 
+h2 {
+  margin-top: 1.5em;
+}
+acronym {
+  color: black;
+}
+acronym:hover {
+  color: #0000ff;
+}
+tt, pre {
+  font-size: 95%;
+}
+pre.small {
+  font-size: 90%;
+}
+li.sp {
+  margin-top: 0.2em;
+}
+ul.tinysp {
+  margin-top: 0.2em;
+
+}
+div.small {
+  font-size: 87%; /*same as small; because of MS-IE*/
+}
+span.hide {
+   display: inline;
+/* display: none;*/
+   color: black;
+   background-color: #d0ffd0;
+}
+span.gray {
+   color: gray;
+}
+p.hide {
+   display: block;
+/* display: none;*/
+   color: black;
+   background-color: #d0ffd0;
+}
+li.hide {
+   margin-top: 0.3em;
+   color: black;
+   background-color: #d0ffd0;
+}
+div.hide {
+   display: block;
+/* display: none;*/
+   color: black;
+   background-color: #d0ffd0;
+}
+p.right {
+   font-size: 87%; /*same as small; because of MS-IE*/
+   text-align: right;
+}
+small {
+   font-size: 87%; /*because of MS-IE*/
+}
