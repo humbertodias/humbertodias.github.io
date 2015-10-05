@@ -1,0 +1,71 @@
+<div id="glowscript" class="glowscript">
+<link type="text/css" href="http://www.glowscript.org/css/redmond/1.1/jquery-ui.custom.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+<link type="text/css" href="http://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="http://www.glowscript.org/lib/jquery/1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/lib/jquery/1.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/package/glow.1.1.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/package/RSrun.1.1.min.js"></script>
+<script type="text/javascript">
+;(function() {
+var __g=typeof global!=='undefined'?global:window;__g=(__g.__streamline||(__g.__streamline={}));__g.setEF=__g.setEF||function(e,f){e.__frame = e.__frame||f};var __srcName='undefined_.js';
+function __func(_,__this,__arguments,fn,index,frame,body){if(!_){return __future.call(__this,fn,__arguments,index)}frame.file=__srcName;frame.prev=__g.frame;__g.frame=frame;try{body()}catch(e){__g.setEF(e,frame.prev);__propagate(_,e)}finally{__g.frame=frame.prev}}
+function __future(fn,args,i){var done,err,result;var cb=function(e,r){done=true;err=e,result=r};args=Array.prototype.slice.call(args);args[i]=function ___(e,r){cb(e,r)};fn.apply(this,args);return function ___(_){if(done)_.call(this,err,result);else cb=_.bind(this)}.bind(this)}
+function __propagate(_,err){try{_(err)}catch(ex){__trap(ex)}}
+function __trap(err){if(err){if(__g.context&&__g.context.errorHandler)__g.context.errorHandler(err);else console.error("UNCAUGHT EXCEPTION: "+err.message+"\n"+err.stack)}}
+/*     1 */ function main(wait) {
+              var version, box, sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, display, vector, _$GS_$END, scene, _$rapyd$_Temp, _$rapyd$_print, arange;
+/*    22 */   function proj(v0, theta) {
+/*    23 */     var ball, g, dt, Fnet, t;
+/*    25 */     ball = sphere({
+/*    25 */       pos: vec(0, 0, 0),
+/*    25 */       radius: 0.02,
+/*    25 */       make_trail: true
+                });
+/*    27 */     ball.m = 0.1;
+/*    29 */     ball.p = vec(v0["*"](cos(theta)), v0["*"](sin(theta)), 0)["*"](ball.m);
+/*    31 */     g = vec(0, 9.8["-u"](), 0);
+/*    33 */     t = 0;
+/*    35 */     dt = 0.01;
+/*    37 */     while ((ball.pos.y >= 0)) {
+/*    39 */       Fnet = ball.m["*"](g);
+/*    41 */       ball.p = ball.p["+"](Fnet["*"](dt));
+/*    43 */       ball.pos = ball.pos["+"](ball.p["*"](dt)["/"](ball.m));
+/*    45 */       t = t["+"](dt);
+                };
+              };
+              var __frame = {
+                name: "main",
+                line: 1
+              };
+              return __func(wait, this, arguments, main, 0, __frame, function __$main() {
+/*     3 */     version = ["1.1","glowscript",];
+/*     4 */     window.__GSlang = "vpython";
+/*     5 */     box = vp_box;
+/*     6 */     sphere = vp_sphere;
+/*     7 */     cylinder = vp_cylinder;
+/*     8 */     pyramid = vp_pyramid;
+/*     9 */     cone = vp_cone;
+/*    10 */     helix = vp_helix;
+/*    11 */     ellipsoid = vp_ellipsoid;
+/*    12 */     ring = vp_ring;
+/*    13 */     arrow = vp_arrow;
+/*    14 */     display = canvas;
+/*    15 */     vector = vec;
+/*    16 */     _$GS_$END = 0;
+/*    17 */     scene = canvas();
+/*    18 */     _$rapyd$_Temp = 0;
+/*    19 */     _$rapyd$_print = print;
+/*    20 */     arange = range;
+/*    49 */     proj(4, 30["*"](pi)["/"](180));
+/*    51 */     proj(4, 35["*"](pi)["/"](180));
+/*    53 */     proj(4, 40["*"](pi)["/"](180));
+                wait();
+              });
+            };
+/*    55 */ main;
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; main() })})()
+</script>
+</div>
