@@ -4,7 +4,8 @@
 T="$(date +%s)"
 
 # Dependences
-sudo apt-get install xvfb python-pygame unzip
+sudo apt-get --assume-yes update
+sudo apt-get --assume-yes install xvfb python-pygame unzip
 
 echo 'Downloading and copying the Game to /vagrant'
 cd /vagrant
