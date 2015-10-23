@@ -16,7 +16,8 @@ int main() {
      * Code your solution here
      * Escriba su solución aquí
      */
-     unsigned long m, n;
+     long m, n;
+
      while( scanf("%ld %ld", &m, &n) != EOF ){
           printf( "%ld\n", fatorial (m) + fatorial(n) );
      }
