@@ -12,8 +12,8 @@ cd /vagrant
 # wget "https://raw.githubusercontent.com/humbertodias/humbertodias.github.io/master/vagrant/pygame/asteroids_sprites.zip"
 unzip asteroids_sprites.zip
 
-cd asteroids_sprites
-python asteroids.py
+# cd asteroids_sprites
+# python asteroids.py
 
 # Set start time so we know how long the bootstrap takes
 T="$(date +%s)"
