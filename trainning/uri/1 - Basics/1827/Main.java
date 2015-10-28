@@ -7,7 +7,9 @@ public class Main {
         int n, a, b, t;
 
         while(in.hasNextInt()) {
+            try{
             n = in.nextInt();
+            }catch(Exception e){ break; }
             a = 0;
             b = (n-1);
             t = (int) Math.ceil(n/2.0);
