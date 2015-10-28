@@ -12,7 +12,7 @@ int main() {
         case 'B': printf("F"); break;
         case 'Z': printf("F"); break;
         case 'p': printf("f"); break;
-        case 's': if (ant!='s') printf("f"); break;
+        case 's': /*if (ant!='s') printf("f"); */ break;
         case 'v': printf("f"); break;
         case 'x': printf("f"); break;
         case 'j': printf("f"); break;
