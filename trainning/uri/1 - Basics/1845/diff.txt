@@ -1,0 +1,10 @@
+3c3
+< We're hafy, ma, we're hafing fun,
+---
+> We're haffy, ma, we're hafing fun,
+18,19c18,19
+< We're hafy, ma, we're hafing fun.
+< It'f feyond my wildeft efectation.
+---
+> We're haffy, ma, we're hafing fun.
+> It'f feyond my wildeft effectation.
