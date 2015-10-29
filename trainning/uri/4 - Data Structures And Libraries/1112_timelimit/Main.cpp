@@ -11,7 +11,7 @@ int main(){
   int x,y,p,q,X,Y,N,Z,W,soma;
   char op;
 
-  while(1){
+  for(;;){
 
     //scanf("%d %d %d",&x,&y,&p);
     cin >> x >> y >> p;

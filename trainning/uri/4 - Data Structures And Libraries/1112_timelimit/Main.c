@@ -1,5 +1,9 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h> //memset
+
+#define somar(X,Y,Z,W, soma) int i, j; for (i = X; i <= Z; ++i)  for (j = Y; j <= W; ++j) soma += m[i][j];  
+
+#define reset(m,x) int i; for (i = 0; i <= x; ++i) memset(m[i], 0, sizeof(int) * x);
 
 unsigned int m[1001][1001];
 
@@ -18,8 +22,9 @@ int main(){
     //   for (j = 0; j <= y; ++j)
     //     m[i][j] = 0;
 
-    for (i = 0; i <= x; ++i)
-    memset(m[i], 0, sizeof(int) * y);
+    // for (i = 0; i <= x; ++i)
+    // memset(m[i], 0, sizeof(int) * x);
+    reset(m,x);
 
     scanf("%d",&q);
     
@@ -45,11 +50,11 @@ int main(){
           Y = soma;
         }
 
-        soma = 0;
-        for (i = X; i <= Z; ++i)
-          for (j = Y; j <= W; ++j)
-            soma += m[i][j];
-
+        // soma = 0;
+        // for (i = X; i <= Z; ++i)
+        //   for (j = Y; j <= W; ++j)
+        //     soma += m[i][j];
+        somar(X,Y,Z,W, soma);
         printf("%d\n",soma*p);
       }
     }
