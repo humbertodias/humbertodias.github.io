@@ -1,33 +1,23 @@
 #include <stdio.h>
 
-int fibonacci(int pos) {
-    int p1 = 0, p2 = 1, pA = 0;
-    int cont;
-    for(cont = 0; cont < pos; cont++) {
-        p1 = p2;
-        p2 = pA;
-        pA = p1 + p2;
-    }
-
-    return pA;
+long fib( long n) {
+    if (n==0 || n==1)
+        return n;
+    else
+        return fib(n-1) + fib(n-2);
 }
 
 int main() {
-    int a, b, n, retorno, cont;
-    long long num;
+     long a, b, n, cont;
+     long num;
 
-    while(1) {
+    while(scanf("%ld %ld %ld", &a, &b, &n) && (a!=0 && b!=0 && n!=0) ) {
         num = 0;
-
-        retorno = scanf("%d %d %d", &a, &b, &n);
-        if((a == 0 && b == 0 && n == 0) || retorno == EOF)
-            break;
-
-        for( cont = -1; cont < n; cont++) {
-            num += fibonacci(a + cont + 1) * fibonacci(b + cont + 1);
+        for( cont = 0; cont < n; cont++) {
+            num += fib(a + cont) * fib(b + cont);
         }
 
-        printf("%lld\n", num);
+        printf("%ld\n", num);
     }
 
     return 0;
