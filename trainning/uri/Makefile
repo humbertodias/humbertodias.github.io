@@ -38,10 +38,10 @@ run_python3: compile_python3
 	@[ -s diff.txt ] || echo "OK"
 	
 compile_c:
-	@gcc "$(FILE_NAME).c" -o "$(FILE_NAME)_c"
+	@gcc "$(FILE_NAME).c" -o "$(FILE_NAME)_c" -O2 -lm
 
 compile_cpp:
-	@g++ "$(FILE_NAME).cpp" -o "$(FILE_NAME)_cpp"
+	@g++ "$(FILE_NAME).cpp" -o "$(FILE_NAME)_cpp" -Wall -std=c++11 -O2 -lm
 
 compile_java:
 	@javac "$(FILE_NAME).java"
