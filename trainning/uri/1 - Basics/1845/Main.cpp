@@ -1,57 +1,46 @@
-#include <stdio.h>
 #include <iostream>
-#include <vector>
-#include <utility>
+#include <string>
+#include <algorithm>
 using namespace std;
-#define mp make_pair
-#define rep(i, n) for(int i=0; i<(int)(n); i++)
-typedef long long Int;
 
-vector<pair<int, int> > factors(int n) {
-    vector<pair<int, int> > ps;
-    int p = n;
-    for(int i=2; (Int)i*i<=p; i++) if(p%i==0) {
-        int c = 0;
-        while(p%i==0) p/=i, c++;
-        ps.push_back(mp(i, c));
+/*
+ * 
+ */
+
+//p -> f
+//s -> f
+//j -> f
+//v -> f;
+//x -> f;
+//b -> f;
+//
+int main(int argc, char** argv) {
+    string str;
+    while(getline(cin,str)){
+        replace(str.begin(),str.end(),'p','f');
+        replace(str.begin(),str.end(),'s','f');
+        replace(str.begin(),str.end(),'v','f');
+        replace(str.begin(),str.end(),'x','f');
+        replace(str.begin(),str.end(),'b','f');
+        replace(str.begin(),str.end(),'j','f');
+        replace(str.begin(),str.end(),'z','f');
+        replace(str.begin(),str.end(),'P','F');
+        replace(str.begin(),str.end(),'S','F');
+        replace(str.begin(),str.end(),'V','F');
+        replace(str.begin(),str.end(),'X','F');
+        replace(str.begin(),str.end(),'B','F');
+        replace(str.begin(),str.end(),'J','F');
+        replace(str.begin(),str.end(),'Z','F');
+        string str2;
+        for(unsigned int i=0;i<str.size();){
+            char f = str[i];
+            while(i<str.size() && tolower(str[i])=='f' && tolower(str[i+1])=='f'){
+                i++;
+            }
+            str2.push_back(f);
+            i++;
+        }
+        cout << str2 << "\n";
     }
-    if(p>1) ps.push_back(mp(p, 1));
-    return ps;
-}
-
-// a^x mod m
-Int modpow(Int a, Int x, Int m) {
-    if(x==0) return 1;
-    return x%2 ? a*modpow(a, x-1, m)%m : modpow(a*a%m, x/2, m);
-}
-
-// 1 + a + ... + a^x mod m
-Int modgeo(Int a, Int x, Int m) {
-    if(x==0) return 1;
-    if(x%2==0) return (1+a*modgeo(a, x-1, m))%m;
-    else {
-        const Int t = modgeo(a, x/2, m);
-        return (t+t*modpow(a, x/2+1, m))%m;
-    }
-}
-
-#define MOD (9901)
-
-int solve(int A, int B) {
-    if(A==0) return 0;
-    if(B==0) return 1;
-    vector<pair<int, int> > ps(factors(A));
-    int ans = 1;
-    rep(i, ps.size()) {
-        const Int p = ps[i].first, c = ps[i].second;
-        ans = ans*modgeo(p, c*B, MOD)%MOD;
-    }
-    return ans;
-}
-
-int main() {
-    int A, B;
-    scanf("%d%d", &A, &B);
-    printf("%d\n", solve(A, B));
     return 0;
 }
