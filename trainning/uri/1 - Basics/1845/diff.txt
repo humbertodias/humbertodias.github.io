@@ -1,32 +1,22 @@
-2,4c2,4
+1,19c1
+< Hey, little train! We are all fumfing on
 < The train that goef to the kingdom.
 < We're hafy, ma, we're hafing fun,
 < And the train ain't efen left the ftation.
----
-> The train that goe to the kingdom.
-> We're haffy, ma, we're hafing fun,
-> And the train ain't efen left the tation.
-7,9c7,9
+< 
+< Hey, little train! Wait for me!
 < I once waf flind fut now I fee.
 < Hafe you left a feat for me?
 < If that fuch a ftretch of the imagination?
----
-> I once wa flind fut now I ee.
-> Hafe you left a eat for me?
-> I that uch a tretch of the imagination?
-12,14c12,14
+< 
+< Hey, little train! Wait for me!
 < I waf held in chainf fut now I'm free.
 < I'm hanging in there, don't you fee,
 < In thif frocef of elimination.
----
-> I wa held in chain fut now I'm free.
-> I'm hanging in there, don't you ee,
-> In thi froce of elimination.
-17,19c17,19
+< 
+< Hey, little train! We are all fumfing on
 < The train that goef to the kingdom.
 < We're hafy, ma, we're hafing fun.
 < It'f feyond my wildeft efectation.
 ---
-> The train that goe to the kingdom.
-> We're haffy, ma, we're hafing fun.
-> It' feyond my wildet effectation.
+> 7800

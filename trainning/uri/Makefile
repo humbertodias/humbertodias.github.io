@@ -26,14 +26,14 @@ run_java: compile_java
 run_python2: compile_python2
 
 	@echo -n 'Python2 = '
-	@python2 "$(FILE_NAME)2.pyc" < in.txt > diff.txt
+	@python2 "$(FILE_NAME)2.pyc" < in.txt > out.txt
 	@-diff ok.txt out.txt &> diff.txt
 	@[ -s diff.txt ] || echo "OK"
 
 run_python3: compile_python3
 
 	@echo -n 'Python3 = '
-	@python3 "$(FILE_NAME)3.py" < in.txt > diff.txt
+	@python3 "$(FILE_NAME)3.py" < in.txt > out.txt
 	@-diff ok.txt out.txt &> diff.txt
 	@[ -s diff.txt ] || echo "OK"
 	
